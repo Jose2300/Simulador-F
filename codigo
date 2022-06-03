@@ -1,0 +1,60 @@
+import random 
+import matplotlib.pyplot as plt
+
+print('Este é o simulador de disperdicio economizado está semana')
+print('Para menos desperdicio utilize') 
+print("1 utilize lista de compras")
+print("2 verificar a validade dos produtos no momento da compra")
+print("3 evitar fazer estoques desnecessários")
+print("4 não julgar o alimento pela aparência")
+
+
+lista1=[]
+semana=["domingo","segunda","terça","quarta","quinta","sexta","sabado"]
+
+m=0
+
+
+while m<7:
+
+    x = random.randint(0,353)
+    lista1.append(x)
+    print(x)
+    m=m+1
+
+plt.title("Economia da Semana")
+plt.plot(semana,lista1)
+
+plt.show()
+somaLista=sum(lista1)
+print(f"Soma da sua economia em gramas de alimento na semana = {somaLista}")
+
+
+
+minima=(min(lista1))
+
+if minima == lista1[0]:
+   print('Dias que podem ser melhorados domingo=',minima)
+elif minima == lista1[1]:
+   print('Dias que podem ser melhorados segunda-feira =',minima)
+elif minima == lista1[2]:
+   print('Dias que podem ser melhorados terça-feira=',minima)
+elif minima == lista1[3]:
+   print('Dias que podem ser melhorados quarta-feira=',minima)
+elif minima == lista1[4]:
+   print('Dias que podem ser melhorados quinta-feira=',minima)
+elif minima == lista1[5]:
+   print('Dias que podem ser melhorados sexta-feira=',minima)
+else:
+   print('Dias que podem ser melhorados sabado=',minima)
+  
+
+pessoa= 416.6
+
+pf= somaLista/pessoa
+
+print(f'Você ajudaria uma pessoa que passa fome se alimentar de forma saudavel durante = ', pf)
+
+
+
+
